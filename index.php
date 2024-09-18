@@ -7,7 +7,7 @@ function generateProxyText($lines) {
     $ws_path = "/";
     for ($i = 0; $i < count($lines); $i++) {
         list($server, $port) = explode(':', trim($lines[$i]));
-        $name = 'sjc' . ($i + 1);
+        $name = '中转ip' . ($i + 1);
         $result .= " - name: {$name}\n";
         $result .= "   server: {$server}\n";
         $result .= "   port: {$port}\n";
@@ -37,7 +37,7 @@ function generateProxyGroupText($lines) {
     $result .= "    proxies:\n";
 
     for ($i = 0; $i < count($lines); $i++) {
-        $name = 'sjc' . ($i + 1);
+        $name = '中转ip' . ($i + 1);
         $result .= "      - {$name}\n";
     }
 
